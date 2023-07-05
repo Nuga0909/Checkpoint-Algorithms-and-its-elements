@@ -1,0 +1,25 @@
+ALGORITHM read_a_sentence
+VAR
+    count_char : INTEGER := 0;
+    count_words : INTEGER := 0;
+    count_vowels : INTEGER := 0;
+    sentence : STRING;
+
+BEGIN
+WHILE (sentence[count_char]<>".") DO
+    IF (sentence[count_char]=" ") THEN
+        count_words := count_words + 1;
+    END_IF
+
+    IF (sentence[count_char]="a" or "e" or "i" or "o" or "u") THEN
+        count_vowels := count_vowels + 1;
+    END_IF
+
+    count_char := count_char + 1;
+END_WHILE
+    
+
+    write(count_char + 1);
+    write(count_vowels);
+    write(count_words + 1);
+END
